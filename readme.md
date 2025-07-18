@@ -31,7 +31,7 @@ Kalam AI PUBLIC URL - https://udify.app/chat/hYb9v11FtGUhAlig
 
 1. Go to [Dify Console](https://cloud.dify.ai/)
 2. Click **“Create App” → “Import via DSL”**
-3. Upload `kalam.dsl.json`
+3. Upload `kalam AI.yml`
 4. Boom. Your AI career assistant is live 🔥
 
 You can also tweak the model, prompt, or tools once imported.
