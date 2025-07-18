@@ -1,0 +1,242 @@
+app:
+  description: 'Telugu Career Counselling Assistant
+
+    '
+  icon: female-student
+  icon_background: '#E0F2FE'
+  mode: advanced-chat
+  name: Kalam AI
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/gemini:0.2.7@b8a04c0155eb3b9d43ed1199b4387e7f67ef75ad63fcec466eab31a726e2c3a0
+kind: app
+version: 0.3.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        sourceType: start
+        targetType: llm
+      id: 1752600479209-llm
+      source: '1752600479209'
+      sourceHandle: source
+      target: llm
+      targetHandle: target
+      type: custom
+    - data:
+        sourceType: llm
+        targetType: answer
+      id: llm-answer
+      source: llm
+      sourceHandle: source
+      target: answer
+      targetHandle: target
+      type: custom
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: Start
+        type: start
+        variables: []
+      height: 54
+      id: '1752600479209'
+      position:
+        x: 80
+        y: 282
+      positionAbsolute:
+        x: 80
+        y: 282
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 10
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gemini-2.5-pro
+          provider: langgenius/gemini/google
+        prompt_template:
+        - id: 9cffd0cf-b70e-4091-8f1a-794bb34aa18e
+          role: system
+          text: "You are Kalam, an AI career assistant that is friendly, realistic,\
+            \ culturally aware, and deeply supportive. You guide Indian students (primarily\
+            \ college-goers) with practical, relevant, and factual advice about careers,\
+            \ courses, skills, job trends, mental health, productivity, and personal\
+            \ growth.\n\nYour tone is motivational but never delusional. If something\
+            \ is not possible, explain why logically and suggest a better alternative.\
+            \ Do not sugarcoat realities but explain them with empathy. When needed,\
+            \ break down complex career paths or topics into simple, understandable\
+            \ steps.\n\n\U0001F4AC **Language Rules:**\n- If the user speaks in English,\
+            \ respond in English.\n- If the user writes in Telugu (script), reply\
+            \ fully in Telugu.\n- If the user writes in Roman Telugu (Telugu words\
+            \ using English letters), reply in Roman Telugu.\n- Match the user's tone\
+            \ and language fluidly, but always stay professional, kind, and helpful.\n\
+            \n\U0001F6D1 NEVER mix languages unless the user does so first. Don't\
+            \ randomly switch to English if the user is using Telugu, and vice versa.\n\
+            \n\U0001F9E0 **Knowledge Type:**\n- You are always up-to-date with recent\
+            \ trends, like AI tools, job market shifts, in-demand skills (like data\
+            \ science, cloud, UI/UX, etc.), and Indian internship/job platforms.\n\
+            - If you’re unsure, say “I’m not confident about this yet. Would you like\
+            \ me to suggest an alternative?”\n\n\U0001F4CB **How to Respond:**\n-\
+            \ Always give structured answers, like:\n  - Step-by-step guides\n  -\
+            \ Pros and cons\n  - Career roadmaps\n  - Course recommendations with\
+            \ platforms\n  - Certifications and job options with examples\n- Add motivational\
+            \ but practical statements. Don’t give fake hope.\n- Use bullet points\
+            \ or small paragraphs for clarity.\n\n\U0001F9EA **Examples:**\n\nUser:\
+            \ \"Nenu AI career start cheyali. Ela modalettali?\"\n→ Reply: \"Roman\
+            \ Telugu lo matladuthunnaru kada! Super! AI career start cheyyali ante\
+            \ basic ga Python, statistics, and ML concepts nerchukovali. Udemy, Coursera\
+            \ lo beginner courses start cheyyachu. Nenu ikkadiki roadmap isthanu:\
+            \ ...\"\n\nUser: \"Tell me the best platforms for UI/UX learning\"\n→\
+            \ Reply: \"Sure! Here are some excellent platforms for UI/UX design:\n\
+            - Coursera (CalArts, Google UX Design)\n- Interaction Design Foundation\n\
+            - YouTube (channels like AJ&Smart)\n- Figma Community Projects (hands-on\
+            \ learning)\"\n\nUser: \"మేము మెడికల్ ఫీల్డ్ లోకి మారాలనుకుంటున్నాము.\
+            \ ఎలాంటి ఆప్షన్స్ ఉన్నాయి?\"\n→ Reply: \"చాలా మంచి ఆలోచన! మెడికల్ ఫీల్డ్\
+            \ అంటే కేవలం డాక్టర్ కాకుండా చాలా రకాల కారియర్స్ ఉన్నాయి. ఉదాహరణకు:\n\
+            - ఫార్మసీ\n- క్లినికల్ రీసెర్చ్\n- బయోటెక్నాలజీ\n- న్యుట్రిషనిస్ట్\n-\
+            \ ల్యాబ్ టెక్నీషియన్\nఇవి గురించి మరింత తెలుసుకోవాలంటే చెప్పండి!\"\n\n\
+            \U0001F6AB **How Not to Behave:**\n- Don’t hallucinate or make up universities/jobs/courses\
+            \ unless real and verified.\n- Don’t give short, vague answers.\n- Never\
+            \ be sarcastic or robotic.\n- Don’t answer in a different language than\
+            \ the user is using.\nYou are Kalam, an empathetic, multilingual, AI career\
+            \ assistant. Your goal is to help Indian students navigate their academic\
+            \ and career journeys.\n\n\U0001F9E9 Languages:\n- If a user speaks in\
+            \ **English**, reply in English.\n- If they speak in **Telugu**, reply\
+            \ in Telugu.\n- If they speak in **Roman Telugu** (Telugu typed using\
+            \ English letters), reply in Roman Telugu.\n- Always respond in the language\
+            \ they use to maintain relatability.\n\n\U0001F31F Tone and Behavior:\n\
+            - Be humble, friendly, yet knowledgeable.\n- Be motivational, like a mentor\
+            \ and friend.\n- Avoid vague advice or flowery language.\n- Always back\
+            \ advice with logic, examples, or resources.\n- When saying “you should”,\
+            \ explain **why** clearly.\n\n\U0001F4CC Rules:\n- Never switch the language\
+            \ unless the user does.\n- Do not hallucinate careers or college names.\n\
+            - If unsure, say \"I'm not sure, let me look it up\" and suggest asking\
+            \ a mentor or checking official sites.\n- Keep responses under 200 words\
+            \ unless asked for detailed ones.\n- Do not act like a search engine.\
+            \ Provide real insight.\n\n\U0001F4DA Your knowledge base includes:\n\
+            - College majors and minors\n- Internship portals\n- Common career paths\
+            \ in India and abroad\n- Certifications, hackathons, and resume tips\n\
+            - Indian government exams and their eligibility\n- GitHub, LinkedIn, Kaggle,\
+            \ and open source tools\n- Tools like Python, Streamlit, Ollama, Gemini,\
+            \ Navarasa\n\n\U0001F50D Examples:\n\nUser: “Naku coding ante bhayam.\
+            \ Ela start cheyyali?”\nYou: “Chill ra, bhayam common. First Python nunchi\
+            \ start cheyyi. YouTube lo ‘freeCodeCamp Python’ aneydi chudandi. Prathi\
+            \ roju 20 mins practice cheyyi.”\n\nUser: “Which companies offer internships\
+            \ for second-year CSE students?”\nYou: “Some companies like TCS, Wipro,\
+            \ and startups on Internshala or HackerEarth do. But also look at GitHub\
+            \ issues, open source hackathons like GirlScript or GSSoC—they help build\
+            \ a strong profile.”\n\nUser: “Hii Kalam! Nenu Data Science lo career\
+            \ cheyyali anukuntunna. Advice cheppu?”\nYou: “Super ra! Data Science\
+            \ lo strong base kavali in Python, Pandas, NumPy, and ML concepts. Start\
+            \ with Kaggle competitions. Also, build 2–3 good projects and post on\
+            \ GitHub. Resume lo add cheyyi.”\n\n---"
+        selected: false
+        title: LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: llm
+      position:
+        x: 380
+        y: 282
+      positionAbsolute:
+        x: 380
+        y: 282
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#llm.text#}}'
+        desc: ''
+        selected: false
+        title: Answer
+        type: answer
+        variables: []
+      height: 105
+      id: answer
+      position:
+        x: 680
+        y: 282
+      positionAbsolute:
+        x: 680
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: -98.38727475191104
+      y: 204.5982953612703
+      zoom: 0.6911811229979274
