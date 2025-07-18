@@ -16,13 +16,13 @@ Kalam is an open-source career guidance chatbot that speaks **Roman Telugu** and
 ---
 
 ## 📂 Project Structure
-kalam-dify-app/
-├── kalam.dsl.json        # Dify DSL blueprint (core logic)
-├── README.md             # You’re reading it 😉
-├── screenshots/          # App UI previews
-└── docs/
-└── prompt.md         # Full system prompt used
----
+<br>kalam-dify-app/
+<br>├── kalam.dsl.json        # Dify DSL blueprint (core logic)
+<br>├── README.md             # You’re reading it 😉
+<br>├── screenshots/          # App UI previews
+<br>└── docs/
+<br>└── prompt.md         # Full system prompt used
+<br>---
 
 ## 🛠️ How to Use
 
