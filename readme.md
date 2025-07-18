@@ -22,6 +22,7 @@ Kalam is an open-source career guidance chatbot that speaks **Roman Telugu** and
 <br>├── screenshots/          # App UI previews
 <br>└── docs/
 <br>└── prompt.md         # Full system prompt used
+<br>└── kalam logo.png
 <br>---
 
 ## 🛠️ How to Use
