@@ -4,10 +4,12 @@ Kalam is an open-source career guidance chatbot that speaks **Roman Telugu** and
 
 ---
 
+Kalam AI PUBLIC URL - https://udify.app/chat/hYb9v11FtGUhAlig
+
 ## 🚀 Features
 
 - 🔁 Dual-language support: English + Roman Telugu
-- 🧭 Grounded career suggestions (not delusional!)
+- 🧭 Grounded career suggestions 
 - 🧠 Powered by Gemini Pro 2.0 LLM
 - 📝 Custom-crafted prompt engineering
 - 🌐 Built on Dify.AI (no code + DSL logic)
