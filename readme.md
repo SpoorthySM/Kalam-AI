@@ -40,8 +40,8 @@ You can also tweak the model, prompt, or tools once imported.
 
 ## 📸 Screenshot
 
-> *screenshots/ss1.png
-> *screenshots/ss2.png
+![Kalam AI Demo 1](Screenshots/ss1.png)
+![Kalam AI Demo 2](Screenshots/ss2.png)
 ---
 
 ## 💬 System Prompt Overview
