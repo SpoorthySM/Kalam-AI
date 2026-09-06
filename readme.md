@@ -40,7 +40,8 @@ You can also tweak the model, prompt, or tools once imported.
 
 ## 📸 Screenshot
 
-> *screenshots/(Folder)
+> *screenshots/ss1.png
+> *screenshots/ss2.png
 ---
 
 ## 💬 System Prompt Overview
